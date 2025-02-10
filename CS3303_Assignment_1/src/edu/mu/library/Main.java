@@ -14,6 +14,19 @@ public class Main {
 		System.out.println("Cool Book: " + coolBook);
 		System.out.println("Cool Book Copy: " + coolBookCopy);
 
+		if(coolBook.equals(coolBookCopy)) {
+			System.out.println("Same Book");
+		}//end if
+		else {
+			System.out.println("Different Books");
+		}//end else
+		if(coolBook.equals(emptyBook)) {
+			System.out.println("Same Book");
+		}//end if
+		else {
+			System.out.println("Different Books");
+		}//end else
+		
 	}//end main
 
 }//end Main

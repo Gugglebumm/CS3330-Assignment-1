@@ -132,14 +132,15 @@ public class Book {
 		return "Book [title=" + title + ", author=" + author + ", ISBN=" + ISBN + ", price=" + price + "]";
 	}//end toString
 	
-	/*
+	
 	@Override
-	public boolean equals(Book other) {
-		if(this.ISBN.equals(other.getISBN())) {
+	public boolean equals(Object other) {
+		Book book = (Book)other;
+		if(this.ISBN.equals(book.getISBN())) {
 			return true;
 		}//end if
 		return false;
 	}//end equals
-	*/
+	
 	
 }//end Book
