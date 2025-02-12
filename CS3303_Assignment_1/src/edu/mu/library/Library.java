@@ -8,13 +8,22 @@ public class Library {
     private Book[] books;
     private int count;
 
-    // Constructor
+    /**
+     * Constructor which makes an empty Library
+     */
     public Library() {
         books = new Book[5]; // Fixed size of 5
         count = 0; // No books initially
     }
 
-    // Method to add a book to the library
+    /**
+     * Method to add a book to the library
+     * @param book This argument is the Book
+     * to be added to the Library
+     * @return Returns true if the Book
+     * was successfully added or false if there
+     * was no room in the Library
+     */
     public boolean addBook(Book book) {
         if (count < books.length) {
             books[count] = book;
@@ -25,7 +34,14 @@ public class Library {
         }
     }
 
-    // Method to remove a book from the library
+    /**
+     * Method to remove a book from the library
+     * @param book This argument is the Book to
+     * be removed from the Library
+     * @return Returns true if the Book is removed
+     * or false if the Book is not found in the 
+     * Library
+     */
     public boolean removeBook(Book book) {
         for (int i = 0; i < count; i++) {
             if (books[i].equals(book)) {
@@ -41,7 +57,14 @@ public class Library {
         return false; // Book not found
     }
 
-    // Method to search for a book by ISBN
+    /**
+     * Method to search for a book by ISBN
+     * @param ISBN This argument is the ISBN
+     * that will be searched for in the Library
+     * @return The Book with the received ISBN
+     * if it is in the Library or null if it is
+     * not
+     */
     public Book searchByISBN(String ISBN) {
         for (int i = 0; i < count; i++) {
             if (books[i].getISBN().equals(ISBN)) {
@@ -51,7 +74,9 @@ public class Library {
         return null; // Book not found
     }
 
-    // Method to display all books in the library
+    /**
+     * Method to display all books in the library
+     */
     public void displayBooks() {
         if (count == 0) {
             System.out.println("No books available.");
